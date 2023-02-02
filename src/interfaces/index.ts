@@ -3,15 +3,19 @@ interface ValidationError {
   property: string;
   value?: any;
   constraints?: {
-      [type: string]: string;
+    [type: string]: string;
   };
   children?: ValidationError[];
-  contexts?: {
-  };
+  contexts?: {};
 }
 
 export interface UpdateInfoRequest {
   name: string;
+}
+export interface UpdateDataRequest {
+  name: string;
+  age: number;
+  birth: Date;
 }
 
 interface BaseResponseInteface {
